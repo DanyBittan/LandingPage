@@ -1,0 +1,174 @@
+@font-face {
+    font-family: mangaFont;
+    src: url(Font/MangaStyle.ttf);
+}
+@font-face {
+    font-family: comicFont;
+    src: url(Font/ActionComics.ttf);
+}
+#vidbg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+body{
+    margin: 0;
+}
+header{
+    height: auto;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    opacity: 90%;
+}
+.title{
+    text-align:center;
+    flex: 1 1 0%;
+    position: relative;
+    overflow: hidden;
+}
+.title h1{
+    text-transform: uppercase;
+    font-family: mangaFont;
+    color: rgb(177, 28, 28);
+}
+.logo, .user{
+    flex: 1 1 0%;
+}
+.user{
+    display: flex;
+    justify-content: right;
+}
+.logo img{
+    width: 150px;
+    height: 100px;
+}
+
+#log, #reg {
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44;
+    
+    width: 25%;
+    margin: 1.2em;
+    padding: 0.2em;
+    color: var(--color);
+    --_p: var(--s);
+    background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 20px;
+    font-family: comicFont;
+    
+    border: 0;
+    
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+#log:hover, #reg:hover, 
+#log:focus-visible, #reg:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+#log:active, #reg:active {
+    background: var(--color);
+    color: #fff;
+}
+.ink{
+    position: absolute;
+    width: 90%;
+    right: 0%;
+    height: 80%;
+    z-index: -1;
+}
+.cajaoculta{
+    background-color: white;
+    position: absolute;
+    width: 90%;
+    right: 2%;
+    height: 80%;
+    -webkit-box-shadow: -33px -1px 20px -16px rgba(0,0,0,0.09);
+    -moz-box-shadow: -33px -1px 20px -16px rgba(0,0,0,0.09);
+    box-shadow: -33px -1px 20px -16px rgba(0,0,0,0.09);
+}
+.lienzo{
+    width: 65%;
+    height: 70%;
+    background-color: #3f3f3f;
+    opacity: 80%;
+    transform: translate( -50%, -50%);
+    border:1px #000 solid;
+    box-shadow:2px 2px 2px 20px hsla(0,5%,5%,.2);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+.lienzo:hover{
+    opacity: 100%;
+}
+canvas{
+    width: 100%;
+    height: 100%;
+}
+
+#leftButton, #rightButton{
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    background-color: #b80404d8;
+    opacity: 70%;
+}
+#leftButton:hover, #rightButton:hover{
+    opacity: 100%;
+}
+#leftButton{
+    left: 0%;
+    border-radius: 0px 10px 10px 0px;
+}
+#rightButton{
+    right: 0%;
+    border-radius: 10px 0px 0px 10px;
+}
+#vidAud{
+    width: 60px;
+    height: 60px;
+    margin-top: 7%;
+    margin-left: 1%;
+    border: solid black;
+    border-radius: 100%;
+    background-color: white;
+}
+#vol{
+    padding: 1em;
+}
+
+@media (max-width:760px){
+    #log, #reg{
+        display: none;
+    }
+    .lienzo{
+        width: 85%;
+        height: 65%;
+    }
+    .title{
+        flex: 2 2 0%;
+    }
+}
+

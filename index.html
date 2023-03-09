@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DizManga</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="animejs/anime.min.js"></script>
+    <script defer src="js/anime.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><img class="logoimg" src="fotos/logoOptimizado.svg" alt="logo"></div>
+        <div class="title">
+            <div class="cajaoculta"></div>
+            <img class="ink" src="fotos/tinta.jpg" alt="">
+            <h1 class="diz">Dizmanga</h1>
+        </div>
+        <div class="user">
+            <button id="log" role="button">Login</button>
+            <button id="reg" role="button">Register</button>
+        </div>
+    </header>
+    <video id="vidbg" preload autoplay muted loop>
+        <source src="media/Vagabond.mp4" type="video/mp4">
+        <source src="media/Vagabond.webm" type="video/webm">
+    </video>
+    <button id="vidAud"><img id="vol" src="fotos/mute.svg" alt=""></button>
+    <div class="lienzo">
+        <canvas id="canvas"></canvas>
+        <audio id="sonidoPagina" src="media/PasarPagina.mp3"></audio>
+        <button id="leftButton">&#8592;</button>
+        <button id="rightButton">&#8594;</button>
+    </div>
+</body>
+</html>
